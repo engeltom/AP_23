@@ -27,17 +27,17 @@ data = pd.read_csv(path)
 xdata = data["num"]
 ydata = np.log(data["val"])
 
-# Plot
-lp = sns.lineplot(x=xdata, y=ydata, color="black", label="Line", zorder=1)
-sp = sns.scatterplot(x=xdata, y=ydata, color="red", marker="x", label="Scatter", zorder=2)
-sp.set(xlabel=r"$x$", ylabel=r"$y$")
+# Plot (Regression)
+res = sns.regplot(x=xdata, y=ydata, data=data, color="black", marker="x", label="Regression", scatter_kws={"zorder":2, "color": "red"}, line_kws={"color": "black", "zorder": 1})
+res.set(xlabel=r"$x$", ylabel=r"$y$")
 
-# Speichern / Anzeigen
-plt.savefig("../Ressourcen/VBeispiel_plot.svg", format="svg")
+# Anzeigen / Speichern
+plt.savefig("../Ressourcen/VBeispiel_plot_regression.svg", format="svg")
 plt.show()
 
 """
 Dokumentation
 https://seaborn.pydata.org/index.html
+https://seaborn.pydata.org/tutorial/regression.html
 https://seaborn.pydata.org/tutorial/properties.html
 """

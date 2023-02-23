@@ -56,10 +56,10 @@
 \tableofcontents
 \newpage
 
-\section{Zielsetzung}
+\section{Zielsetzung}\label{sec:zielsetzung}
 In dem Experiment \ldots
 
-\section{Theorie}
+\section{Theorie}\label{sec:theorie}
 
 \begin{figure}[H]
   \centering
@@ -67,12 +67,12 @@ In dem Experiment \ldots
   \caption{Ein Beispiel Plot mit adäquater Beschreibung, einer Quelle und einem Label}\cite{anleitung}\label{fig:1}
 \end{figure}
 
-\section{Durchführung}
+\section{Durchführung}\label{sec:durchfuhrung}
 \subsubsection{Aufbau}
 \subsubsection{Ablauf}
 
-\section{Auswertung}
-\subsection{Fehler und Messunsicherheiten}
+\section{Auswertung}\label{sec:auswertung}
+\subsection{Fehler und Messunsicherheiten}\label{subsec:fehler-und-messunsicherheiten}
 Jegliche Fehlerfortpflanzungen und Berechnungen mit Messunsicherheiten finden durch das Python-Package Uncertainties\cite{uncertainties} statt. Somit werden einmal alle bekannten Variablen einmal mit einer speziellen Funktion aus Uncertainties festgelegt. Bei allen nachfolgenden Berechnungen erfolgen die benötigten Fortpflanzungen durch Uncertainties automatisch. Die Formel für die Fehlerfortpflanzung ist 
 \begin{align}
   \Delta y=\sum_{i=1}^n\left|\frac{\delta f\left(x_1, \ldots, x_n\right)}{\delta x_i}\right| \Delta x_i.\text{.}\label{gauss}
@@ -83,14 +83,14 @@ und die Formel für den Mittelwert/ das arithmetische Mittel ist
 \end{align}
 Wie die Ableitungen bestimmt werden ist in der \href{https://readthedocs.org/projects/uncertainties-python-package/downloads/pdf/latest/}{Technischen Dokumentation} selbst nachzulesen.
 
-\section{Diskussion}
+\section{Diskussion}\label{sec:diskussion}
 \newpage
 
-\section{Literaturverzeichnis}
+\section{Literaturverzeichnis}\label{sec:literaturverzeichnis}
 \printbibliography[heading = none]
 \newpage
 
-\section{Anhang}
+\section{Anhang}\label{sec:anhang}
 \begin{table}[H]
   \centering
   \caption{Beispiel Tabelle mit adäquater Beschreibung}\label{tab:1}
